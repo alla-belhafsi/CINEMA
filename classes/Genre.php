@@ -33,7 +33,7 @@ class Genre {
     }
 
     public function afficherParGenre() {
-        $result ="<br><b> Film de genre ".$this.":</b><br><br>";
+        $result ="<br><br><b> Film de genre ".$this.":</b><br><br>";
         foreach ($this->films as $film) {
             $result .= "<li>".$film->getTitre()."<br><br>";
         }

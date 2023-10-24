@@ -92,7 +92,7 @@ class Film {
     public function afficherCastingfilm() {
         $result ="<br><br>Dans le film <b>".$this->getTitre()."</b>, ";
         foreach($this->castings as $casting) {
-            $result .= $casting->getRole()." a été incarné par ".$casting->getActeur();
+            $result .= $casting->getRole()." a été incarné par ".$casting->getActeur()."<br>";
         }
         return $result;
     }

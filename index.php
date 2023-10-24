@@ -1,5 +1,3 @@
-<h1> POO CINEMA </h1>
-
 <?php
 
 spl_autoload_register(function ($class_name) {
@@ -54,13 +52,27 @@ $c4 = new Casting($sincity, $callahan, $ja);
 $c5 = new Casting($bacnord, $cerva, $gl);
 
 //Echo
-
+?>
+<h1>Exo POO Cinema</h1>
+<?php
 //echo $bw->getInfos()."<br>";
 //echo $ja->getIdentity()."<br>";
-echo $ss->afficherFilmographie();
+?>
+<h3>Liste des rôles par acteur :</h3><?php
+echo $storm->afficherParRole();
+echo $stamper->afficherParRole();
+?>
+<h3>Casting d'un film :</h3><?php
+echo $sincity->afficherCastingfilm();
+echo $fourfantastic3->afficherCastingfilm();
+?>
+<h3>Liste de films par genre :</h3><?php
 echo $sf->afficherParGenre();
 echo $ac->afficherParGenre();
 echo $co->afficherParGenre();
-echo $storm->afficherParRole();
-echo $stamper->afficherParRole();
-echo $sincity->afficherCastingfilm();
+?>
+<h3>Filmographie d'un acteur</h3><?php
+echo $bw->afficherFilmographieActeur();
+?>
+<h3>Filmographie d'un réalisateur</h3><?php
+echo $ss->afficherFilmographie();
