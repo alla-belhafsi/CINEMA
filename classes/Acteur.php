@@ -25,7 +25,7 @@ class Acteur extends Personne {
     public function afficherFilmographieActeur() {
         $result ="<br><b> Filmographie de ".$this.":</b><br><br>";
         foreach ($this->castings as $casting) {
-            $result .= "<li>".$casting->getFilm()->getTitre()."<br><br>";
+            $result .= "<li>".$casting->getFilm()->getTitre()." (".$casting->getRole().")<br><br>";
         }
         return $result;
     }

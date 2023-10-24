@@ -9,7 +9,7 @@ class Film {
     private int $durer;
     private string $synopsis;
     private array $castings;
-
+   
     public function __construct(Realisateur $realisateur, Genre $genre, string $titre, string $dateParution, int $durer, string $synopsis) {
         $this->realisateur = $realisateur;
         $this->genre = $genre;
@@ -58,7 +58,7 @@ class Film {
         return $this;
     }
 
-    public function getDurer(): string {
+    public function getDurer() {
         return $this->durer;
     }
 
@@ -66,7 +66,12 @@ class Film {
         $this->durer = $durer;
         return $this;
     }
-    
+
+    public function getDureeFormatee() {
+        $dureeEnMinutes = $this->getDurer();
+        return date("H\hi", $dureeEnMinutes * 60);
+    }
+
     public function getSynopsis(): string {
         return $this->synopsis;
     }
@@ -90,15 +95,15 @@ class Film {
     }
     
     public function afficherCastingfilm() {
-        $result ="<br><br>Dans le film <b>".$this->getTitre()."</b>, ";
+        $result ="<br><li>Dans le film <b>".$this->getTitre()."</b>, ";
         foreach($this->castings as $casting) {
-            $result .= $casting->getRole()." a été incarné par ".$casting->getActeur()."<br>";
+            $result .= $casting->getRole()." a été incarné par ".$casting->getActeur()."<br><br></li>";
         }
         return $result;
     }
 
     public function getInfos() {
-        return "<b>".$this->titre."</b> en salle depuis ".$this->dateParution->format("d-m-Y")." (".$this->durer." minutes).<br>".$this->synopsis;
+        return "<b>".$this->titre."</b> en salle depuis ".$this->dateParution->format("d-m-Y")." (".$this->getDureeFormatee().").<br>".$this->synopsis;
     }
     
     public function __toString() {

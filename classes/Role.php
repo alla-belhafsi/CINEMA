@@ -34,8 +34,8 @@ class Role  {
     }
 
     public function afficherParRole() {
-        $result = "<br><b>Acteurs ayant joué le rôle de $this :</b>";
-        $result .= implode(', ', $this->castings);
+        $result = "<br><li><b>Acteurs ayant joué le rôle de $this :</b>";
+        $result .= implode(', ', $this->castings)."<br></li>";
         return $result;
         
     }

@@ -43,6 +43,6 @@ class Casting {
     }
 
     public function __toString() {
-        return $this->acteur." (".$this->film->getTitre().")<br>";
+        return $this->acteur." (".$this->film->getTitre().")";
     }
 }

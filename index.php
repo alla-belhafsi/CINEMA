@@ -76,3 +76,4 @@ echo $bw->afficherFilmographieActeur();
 ?>
 <h3>Filmographie d'un réalisateur</h3><?php
 echo $ss->afficherFilmographie();
+
