@@ -10,10 +10,10 @@ spl_autoload_register(function ($class_name) {
 
 // Role
 
-$bw1 = new Role("Harry STAMPER");
-$ja1 = new Role("Nancy CALLAHAN");
-$ja2 = new Role("Susan STORM");
-$gl1 = new Role("Grégory CERVA");
+$stamper = new Role("Harry STAMPER");
+$callahan = new Role("Nancy CALLAHAN");
+$storm = new Role("Susan STORM");
+$cerva = new Role("Grégory CERVA");
 
 // Acteur
 
@@ -45,11 +45,21 @@ $armageddon = new Film($ss, $sf, "Armageddon", "1998-08-05", 148, "Alors qu'un a
 $sincity = new Film($ss, $sf, "Sin City", "2005-06-01", 123, "Dwight est l'amant secret de Shellie. Il passe ses nuits à protéger Gail et les filles des bas quartiers de Jackie Boy, un flic pourri, violent et incontrôlable. Certains ont soif de vengeance, d'autres recherchent leur salut. Bienvenue à Sin City, la ville du vice et du péché.");
 $bacnord = new Film($cj, $ac, "Bac Nord", "2021-08-18", 164, "Poussée par sa hiérarchie, la BAC Nord, brigade de terrain, cherche sans cesse à améliorer ses résultats. Dans un secteur à haut risque, les flics adaptent leurs méthodes, franchissant parfois la ligne rouge. Jusqu'au jour où le système judiciaire se retourne contre eux...");
 
+// Casting
+
+$c1 = new Casting($fourfantastic2, $storm, $ja);
+$c2 = new Casting($fourfantastic3, $storm, $km);
+$c3 = new Casting($armageddon, $stamper, $bw);
+$c4 = new Casting($sincity, $callahan, $ja);
+$c5 = new Casting($bacnord, $cerva, $gl);
+
 //Echo
 
 //echo $bw->getInfos()."<br>";
-//echo $ja->getInfos()."<br>";
+//echo $ja->getIdentity()."<br>";
 echo $ss->afficherFilmographie();
 echo $sf->afficherParGenre();
 echo $ac->afficherParGenre();
 echo $co->afficherParGenre();
+echo $storm->afficherParRole();
+echo $stamper->afficherParRole();

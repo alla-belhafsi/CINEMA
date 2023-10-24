@@ -33,12 +33,12 @@ class Casting {
         return $this;
     }
 
-    public function getAuteur() {
-        return $this->auteur;
+    public function getActeur() {
+        return $this->acteur;
     }
 
-    public function setAuteur($auteur) {
-        $this->auteur = $auteur;
+    public function setAuteur($acteur) {
+        $this->acteur = $acteur;
         return $this;
     }
 }

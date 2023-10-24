@@ -33,6 +33,18 @@ class Role  {
         $this->castings[] = $casting;
     }
 
+    public function afficherParRole() {
+        $result = "<br><b>Acteurs ayant joué le rôle de $this :</b>";
+        foreach ($this->castings as $casting) {
+            $result .=$casting->getActeur();
+
+            if(sizeof($this->castings)> 1) {
+                $result .=", ";
+            }
+        }
+        return $result;
+    }
+
     public function __toString() {
         return $this->nomPersonnage;
     }

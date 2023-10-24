@@ -22,11 +22,7 @@ class Acteur extends Personne {
         $this->castings[] = $casting;
     }
 
-    public function getInfos() {
-        return parent::getInfos();
-    }
-
-    public function __toString() {
-        return $this->prenom." ".$this->nom;
+    public function getIdentity() {
+        return parent::getIdentity();
     }
 }
