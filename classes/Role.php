@@ -39,7 +39,9 @@ class Role  {
             $result .=$casting->getActeur();
 
             if(sizeof($this->castings)> 1) {
+
                 $result .=", ";
+
             }
         }
         return $result;

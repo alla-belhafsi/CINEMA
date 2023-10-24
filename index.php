@@ -63,3 +63,4 @@ echo $ac->afficherParGenre();
 echo $co->afficherParGenre();
 echo $storm->afficherParRole();
 echo $stamper->afficherParRole();
+
