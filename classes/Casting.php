@@ -2,43 +2,41 @@
 
 class Casting {
     
-    private Film $film;
-    private Role $role;
-    private Acteur $acteur;
+    private array $films;
+    private array $roles;
+    private array $acteurs;
 
     public function __construct(Film $film, Role $role, Acteur $acteur) {
-        $this->film = $film;
-        $this->role = $role;
-        $this->acteur = $acteur;
-        $this->film->addCasting($this);
-        $this->role->addCasting($this);
-        $this->acteur->addCasting($this);
+        $this->films = [];
+        $this->roles = [];
+        $this->acteurs = [];
+        
     }
 
-    public function getFilm() {
-        return $this->film;
+    public function getFilms() {
+        return $this->films;
     }
 
-    public function setFilm($film) {
-        $this->film = $film;
+    public function setFilms($films) {
+        $this->films = $films;
         return $this;
     }
 
-    public function getRole() {
-        return $this->role;
+    public function getRoles() {
+        return $this->roles;
     }
 
-    public function setRole($role) {
-        $this->role = $role;
+    public function setRoles($roles) {
+        $this->roles = $roles;
         return $this;
     }
 
-    public function getAuteur() {
-        return $this->auteur;
+    public function getAuteurs() {
+        return $this->auteurs;
     }
 
-    public function setAuteur($auteur) {
-        $this->auteur = $auteur;
+    public function setAuteurs($auteurs) {
+        $this->auteurs = $auteurs;
         return $this;
     }
 }
