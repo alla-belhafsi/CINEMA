@@ -10,7 +10,7 @@ class Film {
     private int $durer;
     private string $synopsis;
 
-    public function __construct(Realisateur $realisateur, Genre $genre, string $titre, string $dateParution, int $durer, string $synopsis) {
+    public function __construct(Realisateur $realisateur, Genre $genre, Casting $casting, string $titre, string $dateParution, int $durer, string $synopsis) {
         $this->realisateur = $realisateur;
         $this->genre = $genre;
         $this->casting = $casting;

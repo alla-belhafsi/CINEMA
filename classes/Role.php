@@ -5,7 +5,7 @@ class Role  {
     private string $nomPersonnage;
     private Casting $casting;
 
-    public function __construct(string $nomPersonnage) {
+    public function __construct(string $nomPersonnage, Casting $casting) {
        $this->nomPersonnage = $nomPersonnage;
        $this->casting = $casting;
        $this->casting->addActeur($this);

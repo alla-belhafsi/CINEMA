@@ -4,7 +4,7 @@ class Acteur extends Personne {
 
     private Casting $casting;
 
-    public function __construct(string $nom, string $prenom, string $dateNaissance, string $sexe) {
+    public function __construct(Casting $casting, string $nom, string $prenom, string $dateNaissance, string $sexe) {
         parent::__construct($nom, $prenom, $dateNaissance, $sexe);
         $this->casting = $casting;
         $this->casting->addActeur($this);
