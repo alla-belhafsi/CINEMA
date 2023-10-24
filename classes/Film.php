@@ -88,11 +88,19 @@ class Film {
     public function addCasting(Casting $casting) {
         $this->castings[] = $casting;
     }
+    
+    public function afficherCastingfilm() {
+        $result ="<br><br>Dans le film <b>".$this->getTitre()."</b>, ";
+        foreach($this->castings as $casting) {
+            $result .= $casting->getRole()." a été incarné par ".$casting->getActeur();
+        }
+        return $result;
+    }
 
     public function getInfos() {
         return "<b>".$this->titre."</b> en salle depuis ".$this->dateParution->format("d-m-Y")." (".$this->durer." minutes).<br>".$this->synopsis;
     }
-
+    
     public function __toString() {
         return $this->$titre." ".$this->dateParution->format("d-m-Y")." ".$this->durer." ".$this->synopsis;
     }

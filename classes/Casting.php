@@ -41,4 +41,8 @@ class Casting {
         $this->acteur = $acteur;
         return $this;
     }
+
+    public function __toString() {
+        return $this->acteur." (".$this->film->getTitre().")";
+    }
 }
