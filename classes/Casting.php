@@ -39,4 +39,16 @@ class Casting {
         $this->auteurs = $auteurs;
         return $this;
     }
+
+    public function addFilm(Film $film) {
+        $this->films[] = $film;
+    }
+
+    public function addRole(Role $role) {
+        $this->roles[] = $role;
+    }
+
+    public function addauteur(auteur $auteur) {
+        $this->auteurs[] = $auteur;
+    }
 }
